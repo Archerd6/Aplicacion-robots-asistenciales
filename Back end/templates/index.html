@@ -3,15 +3,15 @@
 <head>
   <title>Acceso Artemisa</title>
   <link rel="shortcut icon" type="image/x-icon"
-    href="/static/Logo.png" />
+    href="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png" />
 
   <style>
     h1 {
-      font-family: Georgia;
+      font-family: Copperplate, Papyrus, fantasy;
     }
 
     body {
-      background-image: url("/static/Gradiente.png");
+      background-image: url("https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Gradiente.png");
       background-repeat: repeat;
     }
 
@@ -43,14 +43,14 @@
     function validate() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
-      if (username == "encargado" && password == "encargado" || username == "Juan Gómez" && password == "encargado") {
+      if (username == "encargado" && password == "encargado") {
         alert("Login correcto");
-        window.location = "interfaz_encargado.html"; // Redirección a la vista de encargado
+        window.location = "interfaz_encargado.htm"; // Redirección a la vista de encargado
         return false;
       }
-      if (username == "tecnico" && password == "tecnico" || username == "Antonio Gutiérrez" && password == "tecnico") {
+      if (username == "tecnico" && password == "tecnico") {
         alert("Login correcto");
-        window.location = "Interfaz_tecnico.html"; // Redirección a la vista de tecnico
+        window.location = "Interfaz_tecnico.htm"; // Redirección a la vista de tecnico
         return false;
       }
       else {
@@ -75,7 +75,7 @@
     <h1> Aplicacion para el control de robots asistenciales </h1>
 
     <img
-      src="/static/Logo.png"
+      src="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png"
       width="20%"> <br> <br>
 
     <div class="acceso">

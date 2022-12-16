@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="Vista%20de%20encargado_files/main.css">
+        
+
+    <title> Vista de encargado </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png">
+
+    <link rel="stylesheet" href="Vista%20de%20encargado_files/css.css">
+
+
+
+    </head>
+    <body>
+        
+
+<a style="float:right" href="index.html">Cerrar sesión</a>
+    
+    <h1 class="principal" style="text-align:center"> Vista de encargado Artemisa</h1>
+
+
+    <div class="inline-div-izquierda">
+
+        <h1 class="Copper">Tareas</h1>
+        <center>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Tarea</th>
+                        <th>Atributos</th>
+                        <th>Prioridad</th>
+                        <th>Descripción</th>
+                        <th>Asignar tarea</th>
+                    </tr>
+                </thead>
+                
+                    
+                
+                    
+                            <tbody><tr>
+                            <td> Limpiar Habitacion</td> 
+                            <td>
+                                NºHabitación,ProductoLimpieza,TiempoMaximo
+                            </td> 
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                Fregar suelo y barrer
+                            </td>
+                            <td>
+                                <button type="button" class="button3" onclick="window.location.href='/asignar/2';">+</button>
+                            </td> 
+                   
+                        </tr>
+                    
+                
+                    
+                            <tr>
+                            <td> VideoLlamada</td> 
+                            <td>
+                                ReceptoLlamada,TiempoLlamada,Habitacion
+                            </td> 
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                Robot acude a habitación para realizar videollamada
+                            </td>
+                            <td>
+                                <button type="button" class="button3" onclick="window.location.href='/asignar/3';">+</button>
+                            </td> 
+                   
+                        </tr>
+                    
+                
+                    
+                            <tr>
+                            <td> Llevar Herramientas</td> 
+                            <td>
+                                Herramientas,Destino,Hora Llegada,Hora Vuelta
+                            </td> 
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                LLevar herramientas para una operación
+                            </td>
+                            <td>
+                                <button type="button" class="button3" onclick="window.location.href='/asignar/4';">+</button>
+                            </td> 
+                   
+                        </tr>
+                    
+                
+            </tbody></table>
+
+        </center>
+    </div>
+
+
+
+    <center>
+        <div class="inline-div-derecha">
+            <h1 class="Copper"> Tareas asignadas</h1>
+
+            <center>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Tarea</th>
+                            <th>Prioridad</th>
+                            <th>Atributos</th>
+                            <th>Estado</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    
+                        
+                                <tbody><tr>
+                                <td> Limpiar Habitacion</td> 
+                                <td>
+                                    1
+                                </td> 
+                                <td>
+                                    Hab 2 - Lejia - 2 minutos - 
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    <button type="button" class="button4" onclick="window.location.href='/delete_Asignada/1';">-</button>
+                                </td>                      
+                            </tr>
+                        
+                    
+                        
+                                <tr>
+                                <td> VideoLlamada</td> 
+                                <td>
+                                    1
+                                </td> 
+                                <td>
+                                    cuentaDiscordEjemplo - 20 minutos - Hab 24 - 
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    <button type="button" class="button4" onclick="window.location.href='/delete_Asignada/2';">-</button>
+                                </td>                      
+                            </tr>
+                        
+                    
+                        
+                                <tr>
+                                <td> Llevar Herramientas</td> 
+                                <td>
+                                    3
+                                </td> 
+                                <td>
+                                    Catéter,bisturi,pañuelo - Sala de operación - 15:00 - 15:30 - 
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    <button type="button" class="button4" onclick="window.location.href='/delete_Asignada/3';">-</button>
+                                </td>                      
+                            </tr>
+                        
+                    
+                </tbody></table>
+
+        </center></div>
+    </center>
+
+    <button id="boton2" class="button2" onclick="window.location.href='interfaz_encargado.htm';">Reset</button>
+
+    
+    
+</body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="Crear%20una%20tarea_files/main.css">
+        
+<title> Crear una tarea </title>
+
+<link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png">
+
+<link rel="stylesheet" href="Crear%20una%20tarea_files/css.css">
+
+
+    </head>
+    <body>
+        
+
+
+    
+    <h1 class="principal" style="text-align:center"> Formulario para asignar una tarea</h1>
+
+
+
+    <div class="acceso">
+
+        <form action="/asignar/2" method="POST">
+
+            <p>
+                </p><h3 style="text-align:center">Tipo de tarea</h3>
+                <input type="text" name="nombre" size="45" value="Limpiar Habitacion" readonly="readonly">
+            <p></p>
+            <p>
+                Prioridad:
+                <input type="text" name="prioridad" size="45" value="1">
+            </p>
+
+            <p>
+                </p><h3 style="text-align:center">Atributos</h3>
+            
+            
+            NºHabitación 
+                <input type="text" name="atributos0" size="45">
+                <br>
+            
+            ProductoLimpieza 
+                <input type="text" name="atributos1" size="45">
+                <br>
+            
+            TiempoMaximo 
+                <input type="text" name="atributos2" size="45">
+                <br>
+            
+            <p></p>
+
+            <p>
+
+                <button type="button" class="buttonAnadirTarea" onclick="window.location.href='interfaz_encargado.htm';">Asignar tarea</button>
+            </p>
+
+            
+            <button type="button" class="buttonAnadirTarea" onclick="window.location.href='interfaz_encargado.htm';">Cancelar</button>
+            
+
+        </form>
+    </div>
+    
+    
+    
+    
+</body></html>
