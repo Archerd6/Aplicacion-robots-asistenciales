@@ -12,7 +12,7 @@
 
     body {
       background-image: url("https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Gradiente.png");
-      background-repeat: repeat-x;
+      background-repeat: repeat;
     }
 
     div.acceso {
@@ -45,12 +45,12 @@
       var password = document.getElementById("password").value;
       if (username == "encargado" && password == "encargado") {
         alert("Login correcto");
-        window.location = "interfaz_encargado.html"; // Redirección a la vista de encargado
+        window.location = "interfaz_encargado.htm"; // Redirección a la vista de encargado
         return false;
       }
       if (username == "tecnico" && password == "tecnico") {
         alert("Login correcto");
-        window.location = "Interfaz_tecnico.html"; // Redirección a la vista de tecnico
+        window.location = "Interfaz_tecnico.htm"; // Redirección a la vista de tecnico
         return false;
       }
       else {

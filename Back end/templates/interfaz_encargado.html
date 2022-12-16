@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <title> Vista de encargado </title>
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+{% endblock %}
+
+{% block body %}
+
+<a style="float:right" href="index.html">Cerrar sesión</a>
+    
+    <h1 class="principal" style="text-align:center"> Vista de encargado Artemisa</h1>
+
+
+    <div class="inline-div-izquierda">
+
+        <h1 class="Copper">Tareas</h1>
+        <center>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Tarea</th>
+                        <th>Atributos</th>
+                        <th>Prioridad</th>
+                        <th>Descripción</th>
+                        <th>Asignar tarea</th>
+                    </tr>
+                </thead>
+                {% for task in tasks %}
+                    {% if task.id!=1 %}
+                            <tr>
+                            <td> {{ task.content }}</td> 
+                            <td>
+                                {{task.atributos}}
+                            </td> 
+                            <td>
+                                {{task.priority}}
+                            </td>
+                            <td>
+                                {{task.descripcion}}
+                            </td>
+                            <td>
+                                <button type="button" class="button3" onClick="window.location.href='/asignar/{{task.id}}';">+</button>
+                            </td> 
+                   
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+
+        </center>
+    </div>
+
+
+
+    <center>
+        <div class="inline-div-derecha">
+            <h1 class="Copper"> Tareas asignadas</h1>
+
+            <center>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Tarea</th>
+                            <th>Prioridad</th>
+                            <th>Atributos</th>
+                            <th>Estado</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    {% for inst in instancias %}
+                        {% if inst.id!=0 %}
+                                <tr>
+                                <td> {{ inst.content }}</td> 
+                                <td>
+                                    {{ inst.priority }}
+                                </td> 
+                                <td>
+                                    {{ inst.atributos_asignados }}
+                                </td>
+                                <td>
+                                    {{ inst.completed }}
+                                </td>
+                                <td>
+                                    <button type="button" class="button4" onClick="window.location.href='/delete_Asignada/{{inst.id}}';">-</button>
+                                </td>                      
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>
+
+        </div>
+    </center>
+
+    <button id="boton2" class="button2" onclick="window.location.href='interfaz_encargado.html';">Reset</button>
+{% endblock %}

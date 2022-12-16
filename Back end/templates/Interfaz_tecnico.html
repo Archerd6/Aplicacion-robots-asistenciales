@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+  <title> Vista de técnico </title>
+<link rel="shortcut icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+
+{% endblock %}
+
+{% block body %}
+
+<a style="float:right" href="index.html">Cerrar sesión</a>
+
+  <h1 class="principal" style="text-align:center"> Vista de técnico Artemisa</h1>
+
+
+<div class="inline-div-izquierda">
+
+  <h1 class="Copper">Tareas</h1>
+  <center>
+
+    <table>
+      <thead>
+        <tr>
+            <th> Tarea</th>
+            <th> Id </th>
+            <th> Modificar </th>
+        </tr>
+      </thead>
+
+      {% for task in tasks %}
+        {% if task.id!=1 %}
+          <tr>
+            <td> {{ task.content }}</td> 
+            <td> {{ task.id - 1 }} </td>
+            <td> <button type="button" class="button3" onClick="window.location.href='/update/{{ task.id }}';">🛠️</button> </td>
+         
+          </tr>
+        {% endif %}
+      {% endfor %}
+      </table>
+
+  </center>
+</div>
+
+<div class="inline-div-izquierda2">
+  <br> <br> <br> <br> <br>
+  &nbsp;
+  <button type="button" class="button3" onClick="window.location.href='/new_update/{{ tasks[-1].id }}';">+</button>
+  <button type="button" class="button4" onClick="window.location.href='/delete';">-</button>
+
+ <br> &nbsp;
+  Tareas:
+  <a id="clicks">{{ tasks[-1].id -1 }}</a> <br>
+</div>
+
+<center>
+  <div class="inline-div-derecha">
+    <h1 class="Copper"> Robots</h1>
+
+    <button type="button" class="button3" onClick="window.location.href='/nuevo_robot';">+</button>
+    <button type="button" class="button4" onClick="window.location.href='/delete_robot';">-</button>
+
+    <br>
+
+    <table>
+      <thead>
+        <tr>
+            <th> Robot</th>
+            <th> Id </th>
+    
+        </tr>
+      </thead>
+      {% for robot in rob %}
+      {% if robot.id!=1 %}
+          <tr>
+            <td> {{ robot.nombre }}</td> 
+            <td> {{ robot.id - 1 }} </td>
+         
+          </tr>
+        {% endif %}
+      {% endfor %}
+      </table>
+
+
+  </div>
+
+  
+ 
+
+  <br>
+  <br>
+</center>
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+<center>
+  <button id="boton2" class="button2" onclick="window.location.href='/reset';">Reset</button>
+</center>
+
+  {% endblock %}

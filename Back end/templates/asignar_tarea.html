@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Crear una tarea </title>
+
+<link rel="shortcut icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/Archerd6/Aplicacion-robots-asistenciales-Web/main/Documentos%20del%20proyecto/Logo.png" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+{% endblock %}
+
+{% block body %}
+
+
+    
+    <h1 class="principal" style="text-align:center"> Formulario para asignar una tarea</h1>
+
+
+
+    <div class="acceso">
+
+        <form action="/asignar/{{ task.id }}" method="POST">
+
+            <p>
+                <h3 style="text-align:center">Tipo de tarea</h3>
+                <input type="text" name="nombre" size="45" value="{{ task.content }}" readonly="readonly" >
+            </p>
+            <p>
+                Prioridad:
+                <input type="text" name="prioridad" size="45" value="{{ task.priority }}">
+            </p>
+
+            <p>
+                <h3 style="text-align:center">Atributos</h3>
+            
+            {% for atr in taskinfo %}
+            {{ atr }} 
+                <input type="text" name="atributos{{ taskinfo.index(atr) }}" size="45">
+                <br>
+            {% endfor %}
+            </p>
+
+            <p>
+
+                <input type="submit"  class="buttonAnadirTarea" value="Asignar tarea" >
+            </p>
+
+            
+            <button type="button" class="buttonAnadirTarea"
+                onClick="window.location.href='/interfaz_encargado.html';">Cancelar</button>
+            
+
+        </form>
+    </div>
+    
+    {% endblock %}
