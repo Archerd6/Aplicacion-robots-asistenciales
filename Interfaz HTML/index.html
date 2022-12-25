@@ -43,12 +43,12 @@
     function validate() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
-      if (username == "encargado" && password == "encargado") {
+      if (username == "encargado" && password == "encargado" || username == "Juan Gómez" && password == "encargado") {
         alert("Login correcto");
         window.location = "interfaz_encargado.htm"; // Redirección a la vista de encargado
         return false;
       }
-      if (username == "tecnico" && password == "tecnico") {
+      if (username == "tecnico" && password == "tecnico" || username == "Antonio Gutiérrez" && password == "tecnico") {
         alert("Login correcto");
         window.location = "Interfaz_tecnico.htm"; // Redirección a la vista de tecnico
         return false;
