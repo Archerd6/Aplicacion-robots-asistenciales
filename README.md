@@ -14,7 +14,21 @@ La interfaz debe permitir a los trabajadores de un entorno hospitalario:
 	<br>
 </p>
 
-Para poder acceder a las dos interfaces diferenciadas se necesitan los dos siguientes usuarios.
+
+## Requisitos
+
+Para ejecutar estos scripts, necesitará tener Python 3 instalado, y además se usan las sigientes librerías:
+
+- flask
+- flask_sqlalchemy
+
+### Windows
+
+En windows se puede ejecutar el archivo `Iniciar servidor.bat` direntamente para habrir el servidor
+
+## Inicio de sesión 
+
+Para poder acceder a las dos interfaces diferenciadas se necesitan los dos siguientes usuarios
 
 Usuario encargado:
 
