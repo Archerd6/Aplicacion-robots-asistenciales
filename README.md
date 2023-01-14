@@ -24,7 +24,7 @@ Para ejecutar estos scripts, necesitará tener Python 3 instalado, y además se 
 
 ### Windows
 
-En windows se puede ejecutar el archivo `Iniciar servidor.bat` direntamente para habrir el servidor
+En windows se puede ejecutar el archivo `Iniciar servidor.bat` direntamente para abrir el servidor
 
 ## Inicio de sesión 
 
