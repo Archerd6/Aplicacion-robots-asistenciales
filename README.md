@@ -17,14 +17,19 @@ La interfaz debe permitir a los trabajadores de un entorno hospitalario:
 
 ## Requisitos
 
-Para ejecutar estos scripts, necesitará tener Python 3 instalado, y además se usan las sigientes librerías:
+Para ejecutar estos scripts, necesitará tener Python 3.10 instalado y pip3 para instalar librerías de python:
 
 - flask
 - flask_sqlalchemy
 
 ### Windows
 
-En windows se puede ejecutar el archivo `Iniciar servidor.bat` direntamente para abrir el servidor
+En windows se puede ejecutar el archivo `Iniciar servidor.bat` direntamente para abrir el servidor, teniendo previamente las librerías instaladas
+
+### Linux
+
+En Linux, puedes ejecutar el script `Iniciar servidor.sh` para abrir el servidor desde la terminal, estando en la ruta donde se encuentra el archivo
+
 
 ## Inicio de sesión 
 
