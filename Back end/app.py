@@ -224,7 +224,10 @@ def asignar(id):
                 # Comprobar si el atributo tiene algun valor que sea vacio, para no añadir varios - al final
                 if(request.form["atributos"+str(i)]!=""):
                     CampName="atributos"+str(i)
-                    cadena_con_todos_los_atributos = cadena_con_todos_los_atributos + request.form[CampName]  + " - "
+                    if(i!=len(atributosii)-1): # Si no es el ultimo
+                        cadena_con_todos_los_atributos = cadena_con_todos_los_atributos + request.form[CampName]  + " - "
+                    else: # Si es el ultimo
+                        cadena_con_todos_los_atributos = cadena_con_todos_los_atributos + request.form[CampName]
                 else:
                     # En este caso tenemos que tocarlo solo si es el ultimo del rango, para que no se quede un - al final borramos
                     if(i==len(atributosii)-1 and cadena_con_todos_los_atributos!=""):# Si es el ultimo y no esta vacio
