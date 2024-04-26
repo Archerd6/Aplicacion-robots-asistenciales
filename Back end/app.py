@@ -7,7 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' # 3 barras porque es
 with app.app_context():
     db = SQLAlchemy(app)
 
-class Todo(db.Model): #Tabla para tareas creadas
+class Todo(db.Model): # Tabla para tareas creadas
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
     priority = db.Column(db.String(200))        # Prioridad
