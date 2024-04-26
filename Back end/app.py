@@ -10,7 +10,7 @@ with app.app_context():
 class Todo(db.Model): #Tabla para tareas creadas
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
-    priority = db.Column(db.String(200))        # prioridad
+    priority = db.Column(db.String(200))        # Prioridad
     descripcion = db.Column(db.String(200))             # Descripcion
     atributos = db.Column(db.String(800))               # Atributos
 
