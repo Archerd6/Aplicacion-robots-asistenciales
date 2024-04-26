@@ -135,7 +135,11 @@ def resetEncargado():
     id= tasks[-1].id                           # La ultima tarea
 
     it = InstanciaTarea.query.order_by(InstanciaTarea.id).all() # Todos los robots
-    idr = it[-1].id 
+    
+    # Comprobamos que haya algun robot, para que no de error
+    if(len(it) == 0):
+        return redirect('/interfaz_encargado.html')
+    idr = it[-1].id
 
     if(id > 1):
         for idx in range(2,id+1):
@@ -146,7 +150,7 @@ def resetEncargado():
             except:
                 return "Error while deleting the task" + idx
     
-    for idx in range(2,idr+1):
+    for idx in range(1,idr+1):
         task_to_delete = InstanciaTarea.query.get_or_404(idx)
         try:
             db.session.delete(task_to_delete)
