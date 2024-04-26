@@ -22,7 +22,7 @@ class InstanciaTarea(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
     completed = db.Column(db.Integer, default=0)
-    priority = db.Column(db.String(200))       # prioridad
+    priority = db.Column(db.String(200))       # Prioridad
     atributos_asignados = db.Column(db.String(800))
 
 
